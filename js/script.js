@@ -19,9 +19,24 @@ message.onkeyup = function () {
     console.log(event.target.value.length);
 
     const lengthValue = event.target.value.length;
+    // const lengthTrimmed = lengthValue.trim();
 
     seconButton.addEventListener("click", function() {
         bCount.innerHTML = lengthValue;
 });
 
 };
+
+////RISPOSTA
+// Question 2
+const input = document.querySelector("input");
+const countButton = document.querySelector("form button");
+const countOutput = document.querySelector("b.count");
+
+function countCharacters() {
+    const characterCount = input.value.trim().length;
+    countOutput.innerHTML = characterCount;
+}
+
+countButton.addEventListener("click", countCharacters);
+
